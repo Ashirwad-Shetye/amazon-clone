@@ -3,7 +3,7 @@ import { store } from "../app/store";
 import "../styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 
-const MyApp = ({ Component, pageProps: { session, ...pageProps } }) => {
+const MyApp = ({ Component, pageProps, session }) => {
   return (
     <SessionProvider session={session}>
       <Provider store={store}>
